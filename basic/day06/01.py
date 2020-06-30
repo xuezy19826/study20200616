@@ -37,3 +37,4 @@ def zxgbs(x, y):
 
 print('最大公约数 (16, 8) = ', zdgys(16, 8))
 print('最小公倍数 [16, 8] = ', zxgbs(16, 8))
+print('最大公约数 (13, 17) = ', zdgys(13, 17))
