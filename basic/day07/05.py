@@ -37,7 +37,5 @@ def main():
         print(val, end=' ')
 
 
-
-
 if __name__ == '__main__':
     main()

@@ -49,6 +49,5 @@ def main():
     print(fruits_tuple)
 
 
-
 if __name__ == '__main__':
     main()
