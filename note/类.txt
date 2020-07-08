@@ -1,0 +1,17 @@
+1、python定义类()中写object和不写的区别
+   python3中，类定义默认继承object，所以写不写没有区别
+   但在python2中，并不是这样
+
+
+   【python2】
+   （1）不继承object对象，只拥有了__doc__ , module 和 自己定义的变量（假设一个）, 也就是说这个类的命名空间只有三个对象可以操作.
+        class Animal:
+            ...
+   （2）继承了object对象，拥有了好多可操作对象，这些都是类中的高级特性，
+        class Aminal(object):
+            ...
+
+      如：
+   ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__',
+'__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__',
+'__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'name']

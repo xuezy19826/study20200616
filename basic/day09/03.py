@@ -1,18 +1,18 @@
 # -*- coding：utf-8 -*-#
 
 # --------------------------------------------------------------
-# NAME:          04
-# Description:   定义一个类描述数字时钟
+# NAME:          03
+# Description:   类方法（使用注解@classmethod）
+#                类方法的第一个参数约定名为cls，它代表的是当前类相关的信息的对象，
+#                对过这个参数可以获取和类相关的信息并且和创建出类的对象
 # Author:        xuezy
-# Date:          2020/7/8 15:51
+# Date:          2020/7/8 17:45
 # --------------------------------------------------------------
-import time
+from time import time, localtime, sleep
 
 
 class Clock(object):
-    """
-    数字时钟
-    """
+    """ 数字时钟 """
 
     def __init__(self, hour=0, minute=0, second=0):
         """
@@ -25,11 +25,15 @@ class Clock(object):
         self._minute = minute
         self._second = second
 
+    # 类方法注解
+    @classmethod
+    def now(cls):
+        # 获取当前时间
+        ctime = localtime(time())
+        return cls(ctime.tm_hour, ctime.tm_min, ctime.tm_sec)
+
     def run(self):
-        """
-        走字
-        :return:
-        """
+        """ 走表 """
         self._second += 1
         if self._second == 60:
             self._second = 0
@@ -41,18 +45,19 @@ class Clock(object):
                     self._hour = 0
 
     def show(self):
-        """
-        显示时间
-        :return:
-        """
-        return '%02d:%02d:%02d' % (self._hour, self._minute, self._second)
+        """ 显示当前时间 """
+        print('%02d:%02d:%02d' % (self._hour, self._minute, self._second))
 
 
 def main():
-    clock = Clock(1, 23, 14)
+    # 通过类方法创建对象并获取系统时间
+    clock = Clock.now()
     while True:
-        print(clock.show())
-        time.sleep(1)
+        # 展示时间
+        clock.show()
+        # 休眠1秒
+        sleep(1)
+        # 走表
         clock.run()
 
 
