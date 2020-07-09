@@ -1,0 +1,39 @@
+假设有类信息如下：
+class Test(object,metaclass=ABDMeta)
+    # 限定对象绑定的成员变量
+    __slot__ = ('_name','_age')
+
+    def __init(self, name, age):
+        """ 初始化方法 """
+        self._name = name
+        self._age = age
+
+    # 静态方法注解
+    @staticmethod
+    def is_valid(self, age):
+        """ 判断是否成年 """
+        return True if age > 18 else False
+
+    # 抽象方法注解
+    @abstractmethod
+    def play(self, something):
+        print('%s 在玩%s.' % (self._name, something))
+
+    # 类方法注解
+    @classmethod
+    def now_time(cls):
+        ctime = localtime(time())
+        reutrn ctime
+
+1、@property 用在成员变量上面，表示getter方法，如：
+
+@property
+def name(self):
+    return self._name
+
+2、setter方法，如：
+
+@age.setter
+def age(self):
+    return self._age = age
+

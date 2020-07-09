@@ -15,3 +15,13 @@
    ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__',
 '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__',
 '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'name']
+
+
+2、常用方法描述
+  __init__：初始化方法，创建完对象后，自动调用
+  __str__：返回一个对象的描述信息
+  __slots__：限定对象可以绑定哪些成员变量
+
+
+3、判断对象是否为某个类对象，如判断emp是否为Programmer对象：
+if isinstance(emp, Programmer):

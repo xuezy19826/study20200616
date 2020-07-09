@@ -1,0 +1,2 @@
+先写结论，然后写if语句，再写else语句
+res = 1 if x > 0 else 0
