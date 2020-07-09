@@ -37,3 +37,5 @@ def name(self):
 def age(self):
     return self._age = age
 
+3、@unique 检查枚举属性是否有重复值
+
