@@ -21,6 +21,14 @@ def showTime():
     for d in dtList:
         print(d)
 
+
+def showArray():
+    items = [3, 4, 1, 2, 5]
+    for i in range(0, len(items), 2):
+        print(items[i])
+
+
 if __name__ == '__main__':
-    showTime()
-    print(datetime.datetime.now())
+    # showTime()
+    # print(datetime.datetime.now())
+    showArray()
