@@ -7,7 +7,9 @@
 # Date:          2020/11/6 17:04
 # --------------------------------------------------------------
 import datetime
-def showTime():
+
+
+def showtime():
     dt = datetime.datetime.now() + datetime.timedelta(days=-1)
     dt2 = datetime.datetime.now() + datetime.timedelta(days=-2)
     dt3 = datetime.datetime.now() + datetime.timedelta(days=-3)
@@ -29,6 +31,6 @@ def showArray():
 
 
 if __name__ == '__main__':
-    # showTime()
+    # showtime()
     # print(datetime.datetime.now())
     showArray()
