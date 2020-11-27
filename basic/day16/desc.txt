@@ -10,3 +10,4 @@ Python语言进阶
 8、heapq、itertools等的用法
 9、迭代工具-排列/组合/笛卡尔积
 10、collections模块下的工具类
+11、常用算法
